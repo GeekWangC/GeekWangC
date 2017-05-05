@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOVERPRATTLE</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style type="text/css">
+    	html {
+			-ms-overflow-style:none;
+			overflow:-moz-scrollbars-none;
+		}
+		html::-webkit-scrollbar{width:0px}
+    </style>
+</head>
+<body>
+	<div id="contain"></div>
+	<script type="text/javascript">
+	const setLOVER = ()=>{
+		let type = "get";
+		let index = (Math.floor(Math.random()*90)+1)== 74 ? 75 :Math.floor(Math.random()*90)+1;
+		let url = "http://geekwangc.com/source/image/image-text/"+index+".png";
+		const image = document.createElement("img");
+		image.src = url;
+		image.style.width = "100%";
+        const contain = document.getElementById("contain");
+        contain.appendChild(image);
+        scroll(0,contain.scrollHeight);
+	}
+
+	window.onload = ()=>{
+		setLOVER();
+		setInterval(function () {
+            setLOVER();
+        }, 1500);
+	}
+		
+	</script>
+</body>
+</html>
