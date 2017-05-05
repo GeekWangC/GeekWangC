@@ -7,7 +7,7 @@ this first repository
 # Google浏览器跨域
 > open -a "Google Chrome" --args -disable-web-security --user-data-dir=
 
-#为不同项目设置不同的用户
+# 为不同项目设置不同的用户
 
 平时在开发的过程中，用到git时，要做一些特殊的配置，例如自己公司内网https的SSL证书未经过第三方机构签署，直接操作Git就会报错，需要设置忽略证书，即sslVerify。一般情况下，通过执行如下命令进行设置：
 
