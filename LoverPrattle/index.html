@@ -17,8 +17,9 @@
 	<script type="text/javascript">
 	const setLOVER = ()=>{
 		let type = "get";
-		let index = (Math.floor(Math.random()*90)+1)== 74 ? 75 :Math.floor(Math.random()*90)+1;
-		let url = "http://geekwangc.com/source/image/image-text/"+index+".png";
+		let index = Math.floor(Math.random()*90)+1;
+		ix = index == 74 ? 75 : index;
+		let url = "http://geekwangc.com/source/image/image-text/"+ix+".png";
 		const image = document.createElement("img");
 		image.src = url;
 		image.style.width = "100%";
@@ -28,10 +29,15 @@
 	}
 
 	window.onload = ()=>{
-		setLOVER();
-		setInterval(function () {
-            setLOVER();
-        }, 1500);
+		let us = navigator.userAgent.toLowerCase();
+		if((/micromessenger/.test(us))){
+			setLOVER();
+			setInterval(function () {
+	            setLOVER();
+	        }, 1500);
+		}else{
+			alert("可爱的孩子，在微信中打开哦");
+		}
 	}
 		
 	</script>
