@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex看看不吃亏</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="flex.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	<content class="flex-icon">
+		<div class="header-title">用flex做提示icon</div>
+		<div class="tool">
+			<label>align-items</label>
+			<select id="alignItemsSelect">
+				<option>flex-start</option>
+				<option>flex-end</option>
+				<option>center</option>
+				<option>stretch</option>
+				<option>baseline</option>
+			</select>
+		</div>
+		<div id="icon" class="flex-cont" style="align-items: flex-start;">
+			<div class="icon"></div>
+			<div class="flex-item">元素沿侧轴对齐方式 align-items: flex-start | flex-end | center | stretch | baseline;</div>
+			<div class="flex-item-2">1212121</div>
+			<div class="img"></div>
+		</div>
+	</content>
+
+	<script type="text/javascript">
+		$("#alignItemsSelect").change(function(){ 
+			let alignItems = $(this).children("option:selected").val();
+			const $alignItemsShow = $("#icon");
+			const alignItemsCss = {
+				alignItems:alignItems
+			};
+			$alignItemsShow.css(alignItemsCss);
+		}) 
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.flex-cont{
+	/*定义为flexbox的父元素*/
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.flex-item{
+	/*给子元素自由伸缩的能力*/
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+.flex-item-2{
+	/*给子元素自由伸缩的能力*/
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	flex: 2;
+}
+
+.flex-icon .icon{
+	width: 10px;height: 10px;background: #f00;
+}
+
+.flex-icon .img{
+	width: 20px;height: 20px;background: #0f0;
+}
+
+
+
+
+html,body{
+	margin: 0;padding: 0;
+	height: 100%;
+    width: 100%;
+    font-weight: normal;
+}
+select{
+	border: #f53;
+}
+
+.header-title{
+	height: 2rem;background: #ccc;padding: 5px;
+}
+.tool{
+	height: 2rem;background: #999;
+}
