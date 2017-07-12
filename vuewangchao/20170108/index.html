@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="example">
+		<p>正常: "{{ message }}"</p>
+		<p>反转: "{{ reversedMessage }}"</p>
+	</div>
+	<div id="todo-list-example">
+		<input v-model="newTodoText" v-on:keyup.enter="addNewTodo"
+			placeholder="Add a todo">
+		<ul>
+			<li is="todo-item" v-for="(todo, index) in todos"
+				v-bind:title="todo" v-on:remove="todos.splice(index, 1)"
+			></li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
