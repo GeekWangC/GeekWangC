@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Clock from './app/compents/Clock.js'
 import Toggle from './app/compents/Toggle.js'
-
+import Blog from './app/compents/Blog.js'
+import NameForm from './app/compents/NameForm.js'
+import Calculator from './app/compents/Calculator.js'
 
 
 class App extends Component {
@@ -47,6 +49,9 @@ class App extends Component {
                 <Clock />
                 <Clock />
                 <Toggle />
+                <Blog />
+                <NameForm />
+                <Calculator />
             </div>
         );
     }

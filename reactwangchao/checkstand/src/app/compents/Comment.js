@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
 class Comment extends Component{
-
-	state = {
-		date: new Date(),
-		text: 'I hope you enjoy learning React!',
-	  	author: {
-	    	name: 'Hello Kitty',
-	    	avatarUrl: 'http://placekitten.com/g/64/64'
-	  	}
+	constructor(props) {
+		super(props);
+		this.state = {
+			date: new Date(),
+			text: 'I hope you enjoy learning React!',
+		  	author: {
+		    	name: 'Hello Kitty',
+		    	avatarUrl: 'http://placekitten.com/g/64/64'
+		  	}
+		}
 	}
 
 	avatar =()=>{
