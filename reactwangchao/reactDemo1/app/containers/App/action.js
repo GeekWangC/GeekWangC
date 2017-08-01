@@ -1,5 +1,4 @@
 
-import request from '../../utils/request'
 import {
   TRANSITION_LEFT,
   TRANSITION_RIGHT,
@@ -12,6 +11,7 @@ export function transLeft() {
 }
 
 export function transRight() {
+  console.log('transRight');
   return {
     type: TRANSITION_RIGHT,
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import style from './style.css'
+import style from './style.less'
 
 /*
 	父子组件通信
@@ -34,11 +34,7 @@ export default class SelectBox extends Component{
 
 		return (
 		  <div>
-
 				<Item getCarsHandler={this.getCarsHandler} />
-
-
-
 				<div className={style.parent} onClick={this.showMoreDetailHandler}>【父组件里的广告】：{this.state.content}</div>
 		  </div>
 		)

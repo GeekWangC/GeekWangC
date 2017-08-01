@@ -16,6 +16,7 @@ class App extends Component {
 
   render() {
     const transName = this.props.transName
+    console.log('transName', transName);
     return (
       <ReactCSSTransitionGroup
         component="div"
@@ -36,6 +37,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log("Appp Comp State::", state);
   const { transReducer } = state
   return {
     transName: transReducer.transName,
