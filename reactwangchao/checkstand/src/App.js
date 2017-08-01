@@ -6,6 +6,7 @@ import Toggle from './app/compents/Toggle.js'
 import Blog from './app/compents/Blog.js'
 import NameForm from './app/compents/NameForm.js'
 import Calculator from './app/compents/Calculator.js'
+import TypecheckingWithPropTypes from './app/compents/TypecheckingWithPropTypes.jsx'
 
 
 class App extends Component {
@@ -52,6 +53,7 @@ class App extends Component {
                 <Blog />
                 <NameForm />
                 <Calculator />
+                <TypecheckingWithPropTypes />
             </div>
         );
     }
