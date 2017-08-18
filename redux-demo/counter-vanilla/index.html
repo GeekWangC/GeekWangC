@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计个数redux js</title>
+	<script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+<body>
+	<header>redux demo 计数</header>
+	<content>
+		来看看吧<div id="value">0</div>
+		<div>
+			<input type="button" name="increment" id="increment" value="加一">
+			<input type="button" name="decrement" id="decrement" value="减一">
+			<input type="button" name="incrementIfOdd" id="incrementIfOdd" value="遇单加一">
+			<input type="button" name="incrementAsync" id="incrementAsync" value="延时加一">
+		</div>
+	</content>
+	<footer>
+		<a href="http://geekwangc.com">个人网站</a>
+	</footer>
+	<script type="text/javascript">
+		const counter = (state,action)=>{
+			if (typeof state === 'undefined') {
+          		return 0
+        	}
+        	switch(action.type){
+        		case "INCREMENT":return state + 1
+        		case "DECREMENT":return state - 1
+        		default:return state
+        	}
+		}
+
+		let store = Redux.createStore(counter);
+
+		const valueDom = document.getElementById("value");
+
+		const render = ()=>{
+			valueDom.innerHTML = store.getState().toString();
+		}
+
+      	render()
+
+      	store.subscribe(render)
+
+      	document.getElementById("increment").addEventListener("click",()=>
+      		store.dispatch({type:"INCREMENT"})
+      	);
+      	document.getElementById("decrement").addEventListener("click",()=>
+      		store.dispatch({type:"DECREMENT"})
+      	);
+      	document.getElementById("incrementIfOdd").addEventListener("click",()=>{
+      		if(store.getState() % 2 !==0){
+      			store.dispatch({type:"INCREMENT"})
+      		}
+      	});
+      	document.getElementById("incrementAsync").addEventListener("click",()=>{
+      		setTimeout(()=>{
+      			store.dispatch({type:"INCREMENT"})
+      		},1000)
+      	});
+      
+	</script>
+</body>
+</html>
