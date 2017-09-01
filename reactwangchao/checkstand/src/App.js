@@ -8,6 +8,8 @@ import NameForm from './app/compents/NameForm.js'
 import Calculator from './app/compents/Calculator.js'
 import TypecheckingWithPropTypes from './app/compents/TypecheckingWithPropTypes.jsx'
 
+import A from "./app/compents/A.js"
+
 
 class App extends Component {
     state = {
@@ -34,26 +36,28 @@ class App extends Component {
         // setInterval(this.setlocaleTime,1000);
         return (
             <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h2 onClick={this.handleClick}>我曾认真的怀念你</h2>
-                    <h2>但也不曾亏待自己</h2>
-                </div>
-                <h1>
-                    Hello, {formatName(user)}!
-                </h1>
-                <h3>当能力撑不起野心时，所有的路，都是旁路</h3>
-                <h4>能力匹配机遇，最重要</h4>
-                <p className="App-intro">
-                    It is {this.state.localeTime}
-                </p>
-                <Clock />
-                <Clock />
-                <Toggle />
-                <Blog />
-                <NameForm />
-                <Calculator />
-                <TypecheckingWithPropTypes />
+                <A />
+                {// <div className="App-header">
+                //     <img src={logo} className="App-logo" alt="logo" />
+                //     <h2 onClick={this.handleClick}>我曾认真的怀念你</h2>
+                //     <h2>但也不曾亏待自己</h2>
+                // </div>
+                // <h1>
+                //     Hello, {formatName(user)}!
+                // </h1>
+                // <h3>当能力撑不起野心时，所有的路，都是旁路</h3>
+                // <h4>能力匹配机遇，最重要</h4>
+                // <p className="App-intro">
+                //     It is {this.state.localeTime}
+                // </p>
+                // <Clock />
+                // <Clock />
+                // <Toggle />
+                // <Blog />
+                // <NameForm />
+                // <Calculator />
+                // <TypecheckingWithPropTypes />
+                }
             </div>
         );
     }
