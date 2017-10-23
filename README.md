@@ -4,6 +4,49 @@ geekwangc
 this first repository
 初识github 共同学习 共同进步
 
+#### gitbook
+cnpm install -g gitbook-cli
+gitbook serve -p 8080 .
+
+#### brew安装
+
+> https://brew.sh/index_zh-cn.html
+> 命令行
+> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#### 优化命令行ohmyz
+
+> http://ohmyz.sh/
+> sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#### N管理node版本
+
+> sudo npm install -g n
+> n   输出当前已经安装的node版本以及正在使用的版本，可以通过上下移动选择要使用的版本，按回车生效
+> n 4.4.4 install : 4.4.4 mkdir:/usr/local/n/versions/4.4.4  安装其他版本node
+> n latest  安装最新的版本
+> n stable  安装稳定的版本
+> n rm 4.4.4  删除某个版本
+> n use 4.4.4 some.js  	以指定的版本来执行脚本
+
+#### 淘宝镜像
+
+> $ npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+#### sublime-react插件
+
+> babel
+> sublimeLinter-jsx
+> React ES6 Snippets 语法提示
+
+#### bower安装
+
+> npm install -g bower
+> bower init  bower初始化,会生成bower.json文件
+> bower install angular --save  bower从远程下载angular到本地，--save会保存配置到bower.json中
+
+
+
 # Google浏览器跨域
 > open -a "Google Chrome" --args -disable-web-security --user-data-dir=
 
