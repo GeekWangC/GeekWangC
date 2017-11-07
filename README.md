@@ -92,3 +92,16 @@ open config 命令打开，添加如下配置：
 来修改当前项目提交代码时用到的用户名。
 
 ps：如果全局的配置和当前项目的单独配置中出现相同的配置选项，比如全局和项目都设置了user.name ，那么在该项目中进行git操作时，会默认采用该项目配置的用户名。
+
+
+### input禁止输入中文
+        input添加onchange事件，方法如下
+        function(){
+            var temp="" 
+            for(var i=0;i<e.target.value.length;i++) {
+                if(e.target.value.charCodeAt(i)>0&&e.target.value.charCodeAt(i)<255) 
+                    temp+=e.target.value.charAt(i) 
+            }
+            e.target.value = temp 
+        }
+        
