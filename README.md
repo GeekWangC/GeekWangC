@@ -1,6 +1,15 @@
 geekwangc
 =========
 
+![Visitor Count](https://profile-counter.glitch.me/GeekWangC/count.svg)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GeekWangC&layout=compact)](https://github.com/GeekWangC/github-readme-stats)
+
+![GeekWangC's GitHub stats](https://github-readme-stats.vercel.app/api?username=GeekWangC&show_icons=true&theme=tokyonight)
+
+
+
+
 this first repository
 初识github 共同学习 共同进步
 
